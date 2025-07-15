@@ -1,6 +1,6 @@
 import {cart} from '../../data/cart.js';
-import { getProduct } from '../../data/products.js';
-import { getDeliveryOption } from '../../data/deliveryOptions.js';
+import {getProduct} from '../../data/products.js';
+import {getDeliveryOption} from '../../data/deliveryOptions.js';
 import {formatCurrency} from '../utils/money.js';
 
 export function renderPaymentSummary() {
@@ -64,6 +64,6 @@ export function renderPaymentSummary() {
     </button>
   `;
 
-  document.querySelector('js-payment-summary')
+  document.querySelector('.js-payment-summary')
     .innerHTML = paymentSummaryHTML;
 }

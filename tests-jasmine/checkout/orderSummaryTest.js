@@ -10,7 +10,7 @@ describe('test suite: renderOrderSummary', () => {
 
     document.querySelector('.js-test-container').innerHTML = `
       <div class="js-order-summary"></div>
-      <div class="js-paymeny-summary"></div>
+      <div class="js-payment-summary"></div>
     `;
 
     spyOn(localStorage, 'getItem').and.callFake(() => {
@@ -33,7 +33,7 @@ describe('test suite: renderOrderSummary', () => {
 
   it('displays the cart', () => {
     expect( 
-      document.querySelectorAll('js-cart-item-container').length
+      document.querySelectorAll('.js-cart-item-container').length
     ).toEqual(2);
 
     expect(
@@ -51,7 +51,7 @@ describe('test suite: renderOrderSummary', () => {
     
     document.querySelector(`.js-delete-link-${productId1}`).click();
     expect( 
-      document.querySelectorAll('js-cart-item-container').length
+      document.querySelectorAll('.js-cart-item-container').length
     ).toEqual(1);
     expect(
       document.querySelector(`.js-cart-item-container-${productId1}`)
